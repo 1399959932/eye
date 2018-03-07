@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+	    <!-- Loading Bootstrap -->
+	    <link href="Public/Admin/Flat/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+	    <!-- Loading Flat UI -->
+	    <link href="Public/Admin/Flat/dist/css/flat-ui.css" rel="stylesheet">
+	    <link href="Public/Admin/Flat/docs/assets/css/demo.css" rel="stylesheet">
+	    <link rel="shortcut icon" href="Public/Admin/Flat/img/favicon.ico">
+	    <script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/ueditor.config.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/ueditor.all.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/ueditor.all.js"></script>
+	    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+	    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+	    <script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/lang/zh-cn/zh-cn.js"></script>
+
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	    <!--[if lt IE 9]>
+	      <script src="Public/Admin/Flat/dist/js/vendor/html5shiv.js"></script>
+	      <script src="Public/Admin/Flat/dist/js/vendor/respond.min.js"></script>
+	    <![endif]-->
+
+		<!--上传插件-->
+		<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery.uploadify.min.js"></script>
+	</head>
+	<body>
+		<form action="" method="post" enctype="multipart/form-data">
+			<div class="alert alert-success">修改专家信息</div>
+			<div class="form-group">
+			<label for="exampleInputEmail1">用户名</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="请输入用户名" required="" name="expert_username" value="{$oldData.expert_username}">
+		</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">手机号</label>
+				<input id="" class="form-control" type="text" placeholder="请输入手机号" required="" name="expert_phone" value="{$oldData.expert_phone}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">真实姓名</label>
+				<input class="form-control" type="text" placeholder="请输入真实姓名" required="" name="expert_realname" value="{$oldData.expert_realname}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">所属医院</label>
+				<input  class="form-control" type="text" placeholder="请输入所属医院" required="" name="expert_hospital" value="{$oldData.expert_hospital}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">所属职位</label>
+				<input  class="form-control" type="text" placeholder="请输入所属职位" required="" name="expert_job" value="{$oldData.expert_job}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">邮箱</label>
+				<input  class="form-control" type="text" placeholder="请输入邮箱" required="" name="expert_email" value="{$oldData.expert_email}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">执业编号</label>
+				<input  class="form-control" type="text" placeholder="请输入执业编号" required="" name="expert_prac" value="{$oldData.expert_prac}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">服务范围</label>
+				<input  class="form-control" type="text" placeholder="请输入服务范围" required="" name="expert_service" value="{$oldData.expert_service}">
+			</div>
+
+			<!--<div>-->
+				<!--<label for="exampleInputEmail1">导读</label>-->
+				<!--<input id="exampleInputEmail1" class="form-control" type="text" placeholder="请输入文章导读" required="" name="daodu">-->
+			<!--</div>-->
+			<!--<input type='file'  name='newsart_pic'>-->
+
+			<table class='table table-bordered'>
+				<tr class="info" id="uploadList">
+					<td>上传图片</td>
+					<td>
+						<!-- <input type="file" name='picture[]' multiple="true" id='list_pic'/> -->
+					</td>
+					<td id='pic-list'></td>
+				</tr>
+			</table>
+
+			<div lab="uploadFile">
+				<input id="file" type="file" name="expert_pic">
+
+				<script type="text/javascript">
+					$(function(){
+						// alert()
+						var sid = '{:session_id()}';
+						$('#file').uploadify({
+							'fileTypeDesc' : '上传文件',//上传描述
+							'fileTypeExts' : '*.jpg;*.png',
+							'swf'      : 'Public/Admin/ccc/Org/Uploadify/uploadify.swf',
+							'uploader' : "{:U('News/upload')}",
+							'buttonText':'选择文件',
+							'fileSizeLimit' : '40000KB',
+							'uploadLimit' : 1,//上传文件数
+							'width':65,
+							'height':25,
+							'successTimeout':10,//等待服务器响应时间
+							'removeTimeout' : 0.2,//成功显示时间
+							formData : {'session_id' : sid},
+							'onUploadSuccess' : function(file, data, response) {
+								//转为json
+								data=$.parseJSON(data);
+
+								//获得图片地址
+								// var imageUrl = data.url;
+								data.url = data.savepath+data.savename;
+								var li="<li path='"+data.url+"' url='"+data.url+"'><img src='"+data.url+"'/><input type='hidden' name='expert_pic' value='"+data.url+"'/><span class='x'>X</span></li>";
+								$("#uploadList1 ul").prepend(li);
+								$('.x').click(function(){
+									$(this).parent('li').remove();
+								})
+							}
+						});
+					});
+				</script>
+				<style type="text/css">
+					#uploadList1 ul li img{
+						width: 100px;
+						height: 100px;
+					}
+				</style>
+				<div id="uploadList1">
+					<ul>
+						<li><img src="{$oldData.expert_pic}" alt=""> <span class="x">X</span> </li>
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.x').click(function(){
+					$(this).parent('li').remove();
+				})
+			</script>
+
+			<div class="form-group">
+				<label for="exampleInputEmail1">项目简介</label>
+				<script id="editor" type="text/plain" style="width:100%;height:200px;" name="expert_brief">{$oldData.expert_brief}</script>
+				<script>
+					var ue = UE.getEditor('editor');
+				</script>
+			</div>
+			<button class="btn btn-primary btn-block" type="submit"> 确定 </button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+	    <!-- Loading Bootstrap -->
+	    <link href="Public/Admin/Flat/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+	    <!-- Loading Flat UI -->
+	    <link href="Public/Admin/Flat/dist/css/flat-ui.css" rel="stylesheet">
+	    <link href="Public/Admin/Flat/docs/assets/css/demo.css" rel="stylesheet">
+	    <link rel="shortcut icon" href="Public/Admin/Flat/img/favicon.ico">
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	    <!--[if lt IE 9]>
+	      <script src="dist/js/vendor/html5shiv.js"></script>
+	      <script src="dist/js/vendor/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<table class="table table-hover">
+			<tr class="active">
+			  <th width="30">id</th>
+			  <th>用户id</th>
+			  <th>姓名</th>
+			  <th>电话</th>
+			  <th>申请时间</th>
+			  <th>身份证号</th>
+			  <th>身份证图片</th>
+			  <th>详细地址</th>
+			  <th>职位</th>
+			  <th>审核状态</th>
+			  <th width="200">操作</th>
+			</tr>
+			<foreach name="data" item="vo">
+			<tr>
+				<td>{$vo.eye_id}</td>
+				<td>{$vo.eye_user_uid}</td>
+				<td>{$vo.eye_name}</td>				
+				<td>{$vo.eye_tel}</td>
+				<td>{$vo.eye_time}</td>
+				<td>{$vo.eye_idcard}</td>
+				<td></td>
+				<td>{$vo.eye_address}</td>
+				<td>{$vo.eye_work}</td>
+				<td>
+					<?php if($vo['eye_check'] == '1'){ ?>
+						<span style="color: green;">已通过审核</span>
+					<?php }elseif($vo['eye_check'] == '2'){ ?>
+						<span style="color: pink;">待审核</span>
+					<?php }else{ ?>
+						<span style="color: red;">不通过</span>
+					<?php }?>
+				</td>
+				<td>
+					<a href="{:U('Prove/edit',array('eye_id'=>$vo['eye_id']))}" class="btn btn-sm btn-warning">编辑</a>
+					<a href="javascript:if(confirm('确认删除？')) location.href='{:U('Prove/del',array('eye_id'=>$vo['eye_id']))}'" class="btn btn-sm btn-danger">删除</a>
+				</td>
+			</tr>
+			</foreach>
+		</table>
+	</body>
+</html>

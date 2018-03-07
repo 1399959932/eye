@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+
+		<title>登录-企业登录</title>
+		<include file="Common:header1" />
+	</head>
+	<body class="logon page index body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
+		   <a id="toc_home" class="sc_anchor" title="Home" data-description="<i>Return to Home</i> - <br>navigate to home page of the site" data-icon="icon-home" data-url="index.html" data-separator="yes"></a>
+        	<a id="toc_top" class="sc_anchor" title="To Top" data-description="<i>Back to top</i> - <br>scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+		 	
+		 <!-- Header -->
+              <include file="Common:header" />
+                <!-- /Header -->
+                <!-- Header Mobile -->
+                <div class="header_mobile">
+                    <div class="content_wrap">
+                        <div class="menu_button icon-menu"></div>
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="Public/Home/images/logo.png" class="logo_main" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="side_wrap">
+                        <div class="close">Close</div>
+                        <div class="panel_top">
+                            <nav class="menu_main_nav_area">
+                                <ul id="menu_main_mobile" class="menu_main_nav">
+                                	<li><a href="index.html">首页</a></li>
+                                    <li><a href="opy.html">眼科医学</a></li>
+									<li><a href="news.html">新闻中心</a></li>
+									<li><a href="expert.html">眼科专家</a></li>
+									<li><a href="history.html">眼科历史</a></li>
+									<li><a href="company.html">医疗企业</a></li>
+									<li><a href="rescue.html">救助中心</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Login -->
+                            <div class="login">
+                                <a href="login.html" class="popup_link popup_login_link icon-user">登录</a>
+                            </div>
+                            <div class="login">
+                                <a href="login_expert.html" class="popup_link popup_login_link icon-user">专家登录</a>
+                            </div>
+                            <div class="login">
+                                <a href="login_company.html" class="popup_link popup_login_link icon-user">企业登录</a>
+                            </div>
+                            <!-- /Login -->
+                        </div>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <!-- /Header Mobile -->
+                <!-- Breadcrumbs -->
+				<div class="top_panel_title top_panel_style_3 title_present breadcrumbs_present scheme_original">
+					<div class="top_panel_title_inner top_panel_inner_style_3 breadcrumbs_block_bg3">
+						<div class="content_wrap">
+							<h1 class="page_title">登录</h1>
+							<div class="breadcrumbs">
+								<a class="breadcrumbs_item home" href="index.html">首页</a>
+								<span class="breadcrumbs_delimiter"></span>
+								<span class="breadcrumbs_item current">企业登录</span>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Breadcrumbs -->
+                <div class="content_wrap">
+                		<div id="popup_login" class="popup_wrap popup_logon bg_tint_light animated fast">
+							<div class="form_wrap">
+								<div class="form_left">
+									<form action="" method="post" name="login_form" class="popup_form login_form" id="form">
+										<div class="popup_form_field login_field iconed_field icon-user">
+											<input type="text" id="log" name="company_phone" value="" placeholder="手机号">
+										</div>
+										<div class="popup_form_field password_field iconed_field icon-lock">
+											<input type="password" id="password" name="company_password" value="" placeholder="密码">
+										</div>
+										<div class="popup_form_field remember_field">
+											<input type="checkbox" value="forever" id="rememberme" name="rememberme">
+											<label for="rememberme">记住账号</label>
+											<a href="#" class="forgot_password">忘记密码?</a>
+										</div>
+										<div class="popup_form_field submit_field">
+											<input type="submit" class="submit_button" value="登录"> 
+										</div>
+									</form>	
+								</div>
+								<div class="form_right">
+									<div class="login_socials_title">您可以使用您的社交资料登录</div>
+												<div class="sc_socials sc_socials_type_icons sc_socials_size_tiny">
+		                                            <div class="sc_socials_item">
+		                                                <a href="javascript:;" target="_blank" class="social_icons social-qq">
+		                                                   <span class="icon-qq"></span>
+		                                                </a>
+		                                            </div>
+		                                            <div class="sc_socials_item">
+		                                                <a href="user_center.html" target="_blank" class="social_icons social-weibo">
+		                                                   <span class="icon-weibo"></span>
+		                                                </a>
+		                                            </div>
+		                                        </div>
+									<div>如果如果未注册本网站账号请您先注册</div>
+									<a href="{:U('Company/reg')}" class="login_btn">注册账号</a>
+									<div class="result message_block"></div>
+								</div>
+							</div>
+						</div>
+                </div>
+		
+		       <!-- Footer -->
+           <include file="Common:footer" />
+	</body>
+</html>

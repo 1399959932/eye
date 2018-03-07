@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>企业认证中心</title>
+		<include file="Common:header1" />
+		<include file="Common:header" />
+
+	</head>
+
+	<body class="page page-template body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right">
+		
+				<!-- Breadcrumbs -->
+				<div class="top_panel_title top_panel_style_3 title_present breadcrumbs_present scheme_original">
+					<div class="top_panel_title_inner top_panel_inner_style_3 breadcrumbs_block_bg3">
+						<div class="content_wrap">
+							<h1 class="page_title">认证中心</h1>
+							<div class="breadcrumbs">
+								<a class="breadcrumbs_item home" href="index.html">首页</a>
+								<span class="breadcrumbs_delimiter"></span>
+								<span class="breadcrumbs_item current">企业认证中心</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Breadcrumbs -->
+				<!-- Page Content Wrap -->
+				<div class="content_wrap">
+					<!--prove_content_company start-->
+					<div class="prove_content_company">
+						<!--comp start-->
+					 	<div class="comp">
+					 		<!--标题-->
+							<div class="line">
+									<div class="right-title fl">
+									<h4>企业信息</h4>
+								</div>
+								<div class="right-title fr">
+									<span class="lits">帮助</span>
+								</div>
+							</div>
+							<!--标题-->
+							<div class="lineto">
+								<h5>企业基本信息</h5>
+							</div>
+					<!-- 2.27陈企业上传认证信息start -->
+					<form action="" method="post" enctype="multipart/from-data">
+							<!--联系电话-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i> 联系电话：</h6></div>
+									<div class="right-tit fl"><h6><input type="text" name="expert_tel" value="{$_SESSION['company_phone']}"></h6></div>	
+									<div class="right-t fl"><span>( 已确认为企业联系电话 )</span></div>
+									<!--<div class="right-ti fl">
+									</div>-->
+							</div>
+							<!--联系电话-->
+							<!--企业名称-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>企业名称：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_name" value="{$data.com_name}" required="required" />
+									</div>
+									<div class="right-t fl"><span>( 请填写机构在银行的开户名称，例如：腾讯公益慈善基金会 )</span></div>
+							</div>
+							<!--企业名称-->
+							<!--所属行业-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>所属行业：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_industry" value="{$data.com_industry}" required="required" />
+									</div>
+									<div class="right-t fl"><span>( 请选择 )</span></div>
+							</div>
+							<!--所属行业-->
+							<!--成立时间-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>成立时间：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_set_time" value="{$data.com_set_time}" required="required" />
+									</div>
+									<div class="right-t fl"><span>( 时间格式：2016-09-09 )</span></div>
+							</div>
+							<!--成立时间-->
+							<!--所在城市-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>所在城市：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_city" value="{$data.com_city}" required="required" / >
+									</div>
+									<div class="right-t fl"><span>( 请选择 )</span></div>
+							</div>
+							<!--所在城市-->
+							<!--企业负责人-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>企业负责人：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_boss" value="{$data.com_boss}" required="required" / >
+									</div>
+									<div class="right-t fl"><span>( 请填写企业当前负责人姓名 )</span></div>
+							</div>
+							<!--企业负责人-->
+							<!--注册资金-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>注册资金：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_enroll_money" value="{$data.com_enroll_money}" required="required" / >
+									</div>
+									<div class="right-t fl"><span>( 请填写企业的注册资金 )</span></div>
+							</div>
+							<!--注册资金-->
+							<!--企业规模-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>企业规模：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_scale" value="{$data.com_scale}" required="required" />
+									</div>
+									<div class="right-t fl"><span>( 请选择企业的规模人数 )</span></div>
+							</div>
+							<!--企业规模-->
+							<!--企业证明材料-->
+							<div class="lineto">
+								<h5>企业证明材料</h5>
+							</div>
+							<!--企业证明材料-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>企业logo：</h6></div>
+									<div class="right-ti fl">
+										<input type="file" name="com_logo" value="{$data.com_logo}" multiple="multiple" required="required" />	
+									</div>
+									
+							</div>
+							<!--上传企业logo-->
+							<!--上传企业证书-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>企业证书：</h6></div>
+									<div class="right-ti fl">
+										<input type="file" name="com_certificate" value="{$data.com_certificate}" multiple="multiple"  required="required" />
+									</div>
+									<div class="right-t fl"><span>( 已正式注册的公益机构，请上传机构资质证件扫描图片 )</span></div>
+							</div>
+							<!--上传企业证书-->
+							<!--企业证书有效期-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i>*</i>证书有效期：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_cer_time" value="{$data.com_cer_time}" required="required" />
+									</div>
+									<div class="right-t fl"><span>( 时间格式：2016-09-09 )</span></div>
+							</div>
+							<!--企业证书有效期-->
+							
+							<div class="lineto">
+								<h5>完善信息</h5>
+							</div>
+							<!--完善信息-->
+							<!--座机电话-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i class="hidde">*</i>座机电话：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_plone" value="{$data.com_plone}" required="required" />
+									</div>
+									<div class="right-t fl"><span>( 请填写机构常用联系电话，例如：0755-83765566 )</span></div>
+							</div>
+							<!--座机电话-->
+							<!--企业邮箱-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i class="hidde">*</i>企业邮箱：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_email" value="{$data.com_email}" required="required">
+									</div>
+									<div class="right-t fl"><span>( 请填写常用企业邮箱)</span></div>
+							</div>
+							<!--企业邮箱-->
+							<!--详细地址-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i class="hidde">*</i> 详细地址：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_address" value="{$data.com_address}" required="required">
+									</div>
+									<div class="right-t fl"><span>( 请完善详细地址)</span></div>
+							</div>
+							<!--详细地址-->
+							<!--一句话简介-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6><i class="hidde">*</i> 一句简介：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_idea" value="{$data.com_idea}" required="required">
+									</div>
+									<div class="right-t fl"><span>( 请用一句话介绍机构的公益理念、愿景，将展示在机构主页中，最多不超过20个字 )</span></div>
+							</div>
+							<!--一句话简介-->
+							<!--企业简介-->
+							<div class="lineth" id="highly">
+									<div class="right-tit fl"><h6><i class="hidde">*</i>企业简介：</h6></div>
+									<div class="right-ti fl">
+										<input type="text" name="com_introduce" value="{$data.com_introduce}" required="required"></div>
+									<div class="right-t fl">
+										<span>企业简介建议保持在40～120字之间，同时建议前40个字能表达出基金会宗旨与精神</span>
+									</div>
+							</div>
+							<!--企业简介-->
+							<!--下一步按钮-->
+							<div class="lineth">
+									<div class="right-tit fl"><h6 class="hidde"><i>*</i>筹款目标：</h6></div>
+									<div class="right-ti fl">
+										<input type="submit" name="" value="提交认证" id="but"/>
+									</div>
+							</div>
+							<!--下一步按钮-->
+					 	</div>	
+					 	<!--comp end-->
+					 	</form>
+					 	<!-- 2.26陈结束 -->
+					</div>
+					<!--prove_content_company start-->
+				</div></div>
+				<!-- /Page Content Wrap -->
+			 <!-- Footer -->
+		<include file="Common:footer" />
+	</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+	    <!-- Loading Bootstrap -->
+	    <link href="Public/Admin/Flat/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+	    <!-- Loading Flat UI -->
+	    <link href="Public/Admin/Flat/dist/css/flat-ui.css" rel="stylesheet">
+	    <link href="Public/Admin/Flat/docs/assets/css/demo.css" rel="stylesheet">
+	    <link rel="shortcut icon" href="Public/Admin/Flat/img/favicon.ico">
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	    <!--[if lt IE 9]>
+	      <script src="dist/js/vendor/html5shiv.js"></script>
+	      <script src="dist/js/vendor/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<table class="table table-hover">
+			<tr class="active">
+			  <th width="30">id</th>
+			  <th>企业id</th>
+			  <th>企业名称</th>
+			  <th>企业电话</th>
+			  <th>所属行业</th>
+			  <th>建立时间</th>
+			  <th>所在城市</th>
+			  <th>企业负责人</th>
+			  <th>注册资金</th>
+
+			  <th>企业规模</th>
+			  <th>企业logo</th>
+			  <th>企业证书</th>
+			  <th>企业证书有效期</th>
+			  <th>企业座机</th>
+			  <th>企业邮箱</th>
+			  <th>公司详细地址</th>
+			  <th>公司理念</th>
+			  <th>公司简介</th>
+
+			  <th>审核状态</th>
+			  <th width="200">操作</th>
+			</tr>
+			<foreach name="data" item="vo">
+			<tr>
+				<td>{$vo.com_id}</td>
+				<td>{$vo.com_user_uid}</td>
+				<td>{$vo.com_name}</td>				
+				<td>{$vo.com_tel}</td>
+				<td>{$vo.com_industry}</td>
+				<td>{$vo.com_set_time}</td>
+				<td>{$vo.com_city}</td>
+				<td>{$vo.com_boss}</td>
+				<td>{$vo.com_enroll_money}</td>
+
+				<td>{$vo.com_scale}</td>
+				<td>{$vo.com_logo}</td>
+				<td>{$vo.com_certificate}</td>
+				<td>{$vo.com_cer_time}</td>
+				<td>{$vo.com_plone}</td>
+				<td>{$vo.com_email}</td>
+				<td>{$vo.com_address}</td>
+				<td>{$vo.com_idea}</td>
+				<td>{$vo.com_introduce}</td>
+
+				<td>
+					<?php if($vo['com_check'] == '1'){ ?>
+						<span style="color: green;">已通过审核</span>
+					<?php }elseif($vo['com_check'] == '2'){ ?>
+						<span style="color: pink;">待审核</span>
+					<?php }else{ ?>
+						<span style="color: red;">不通过</span>
+					<?php }?>
+				</td>
+				<td>
+					<a href="{:U('Company/editProve',array('com_id'=>$vo['com_id']))}" class="btn btn-sm btn-warning">编辑</a>
+					<a href="javascript:if(confirm('确认删除？')) location.href='{:U('Company/del',array('com_id'=>$vo['com_id']))}'" class="btn btn-sm btn-danger">删除</a>
+				</td>
+			</tr>
+			</foreach>
+		</table>
+	</body>
+</html>

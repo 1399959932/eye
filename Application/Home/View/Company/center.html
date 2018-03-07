@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+
+        <title>个人中心</title>
+		<include file="Common:header1" />
+    </head>
+
+    <body class="user_center page index body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
+      	 <!-- Header -->
+               <include file="Common:header" />
+                <!-- /Header -->
+                <!-- Header Mobile -->
+                <div class="header_mobile">
+                    <div class="content_wrap">
+                        <div class="menu_button icon-menu"></div>
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="Public/Home/images/logo.png" class="logo_main" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="side_wrap">
+                        <div class="close">Close</div>
+                        <div class="panel_top">
+                            <nav class="menu_main_nav_area">
+                                <ul id="menu_main_mobile" class="menu_main_nav">
+                                	<li><a href="index.html">首页</a></li>
+                                    <li><a href="opy.html">眼科医学</a></li>
+									<li><a href="news.html">新闻中心</a></li>
+									<li><a href="expert.html">眼科专家</a></li>
+									<li><a href="history.html">眼科历史</a></li>
+									<li><a href="company.html">医疗企业</a></li>
+									<li><a href="rescue.html">救助中心</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Login -->
+                            <div class="login">
+                                <a href="login.html" class="popup_link popup_login_link icon-user">登录</a>
+                            </div>
+                            <div class="login">
+                                <a href="login_expert.html" class="popup_link popup_login_link icon-user">专家登录</a>
+                            </div>
+                            <div class="login">
+                                <a href="login_company.html" class="popup_link popup_login_link icon-user">企业登录</a>
+                            </div>
+                            <!-- /Login -->
+                        </div>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+                <!-- /Header Mobile -->
+      	<!--user_center page-->
+      	<div class="content_wrap">
+      		<div class="user_centent" id="user_wrap">
+      			<div class="user_tx">
+      				<a href="" title="">
+      					<img src="Public/Home/images/big.jpg"/>
+      				</a>
+      			</div>
+      			<div class="user_nav">
+      				<ul class="user_navul">
+      					<li class="user_navli active">
+      						个人资料			
+      					</li>
+      					<li class="user_navli">
+      						我的捐助
+      					</li>
+      					<li class="user_navli">
+      						我的项目
+      					</li>
+      					<li class="user_navli">
+      						我的文章
+      					</li>
+      					<li class="user_navli">
+      						密码安全
+      					</li>
+      					<div class="clear"></div>
+      				</ul>
+      			</div>
+      			<div class="user_navcerter">
+      				<div class="user_navmain active">
+      					<ul class="user_navmain_ul">
+      						<li>用户名：<input class="user_int" type="" value="{$data.company_name}"/></li>
+      						<li>手机号：<input class="user_int" type=""value="{$data.company_phone}"/></li>
+      						<li>邮&nbsp;&nbsp;&nbsp;箱：<input class="user_int" type="" value="{$data.company_email}"/></li>
+      						<div class="clear"></div>
+      					</ul>
+      					<a class="user_margg" id="user_margg" href="javascript:;">更改信息</a>
+      				</div>
+      				<div class="user_navmain">
+      				<div id="user_jk">
+      					<table class="user_tab">
+      						<tr>
+      						<td class="column-2_10">序号</td>
+      						<td class="column-3_10">捐款时间</td>
+							<td class="column-2_10">捐款金额</td>
+							<td class="column-3_10">项目</td>
+      					</tr>
+      					<tr>
+      						<td class="column-2_10">1</td>
+      						<td class="column-3_10">2017-12-11</td>
+							<td class="column-2_10">99</td>
+							<td class="column-3_10">MD关爱项目</td>
+      					</tr>
+      					</table>
+      				</div>
+      					<div style="display: none;">
+      						暂无捐助信息<a href="">前往捐助</a>
+      					</div>
+      				</div>
+      				<div class="user_navmain">
+						<?php
+                          if($prove['com_check'] == '1'){
+                        ?>
+						<a href="javascript:0" style="color: green;">认证通过</a>
+						<?php }elseif($prove['com_check'] == '0') { ?>
+						<a href="{:U('Company/proveA')}" style="color: red;">认证前</a>
+
+						<?php }elseif($prove['com_check'] == '2'){ ?>
+						<a href="{:U('Company/proveEdit')}">认证中,可修改认证信息</a>
+						<?php }else{ ?>
+						<a href="{:U('Company/proveA')}">我要认证</a>
+						<?php } ?>
+      				</div>
+      				<div class="user_navmain">
+      					您未发布文章<a href="">发布文章</a>
+      				</div>
+      				<div class="user_navmain">
+	      				<ul>
+	      					<li>旧&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码：&nbsp;<input type="text" placeholder="原始密码"/></li>
+	      					<li>新&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码：&nbsp;<input type="text" placeholder="新密码"/></li>
+	      					<li>请再次输入：<input type="text" placeholder="请再次输入"/></li>
+	      					<a href="JavaScript:;">更改密码</a>
+	      				</ul>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      	<!--user_center page end-->
+      	        <!-- Footer -->
+               <include file="Common:footer" />
+    </body>
+
+</html>

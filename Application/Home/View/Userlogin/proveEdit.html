@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn" class="scheme_original">
+
+
+
+	<head>
+
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<meta name="format-detection" content="telephone=no">
+
+
+
+		<title>用户个人认证信息修改</title>
+
+		 <include file="Common:header1" /> 
+
+		 <include file="Common:header" />
+
+
+
+	</head>
+
+
+
+	<body class="prove_people page page-template body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right news_center">
+				<!-- /Breadcrumbs -->
+
+				<!-- Page Content Wrap -->
+
+				<div class="content_wrap">
+
+					<!--prove_content_people start-->
+
+					<div class="prove_content_people">
+
+						<div class="p-log">
+
+							<!--标题-->
+
+							<div class="line">
+
+								<div class="right-title fl">
+
+									<h4>个人认证中心</h4>
+
+								</div>
+
+								<div class="right-title fr">
+
+									<a href="item_explain.html"><span class="lits">帮助</span></a>
+
+								</div>
+
+							</div>
+
+							<!--标题-->
+
+							<!--手机号码-->
+						<form action="" method="post" enctype="multipart/from-data">
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6><i>*</i> 手机号码：</h6></div>
+
+									<div class="right-tit fl"><h6><input type="text" name="eye_tel" value="{$_SESSION['eye_phone']}"></h6></div>	
+
+							</div>
+
+							<!--手机号码-->
+
+							<!--真实姓名-->
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6><i>*</i>真实姓名：</h6></div>
+
+									<div class="right-ti fl">
+
+										<input type="text" name="eye_name" value="{$data.eye_name}" required="required"/>
+
+									</div>
+
+									<div class="right-t fl"><span>( 请务必填写真实姓名，绑定认证后将无法修改。 )</span></div>
+
+							</div>
+
+							<!--真实姓名-->
+
+							<!--身份证号-->
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6><i>*</i>身份证号：</h6></div>
+
+									<div class="right-ti fl">
+
+										<input type="text" name="eye_idcard" value="{$data.eye_idcard}" required="required"/>
+
+									</div>
+
+									<div class="right-t fl"><span>( 请填写匹配身份证号，绑定认证后将无法修改。 )</span></div>
+
+							</div>
+
+							<!--身份证号-->
+
+							<!--上传照片-->
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6><i>*</i>上传照片：</h6></div>
+
+									<div class="right-ti fl">
+
+										<input type="file" name="eye_picdata" value="{$data.eye_picdata}" multiple="multiple" required="required"/>
+
+									</div>
+
+									<div class="right-t fl"><span>( 身份证正反面 )</span></div>
+
+							</div>
+
+							<!--上传照片-->
+
+							<!--地址-->
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6><i>*</i>详细地址：</h6></div>
+
+									<div class="right-ti fl">
+
+										<input type="text" name="eye_address" value="{$data.eye_address}" required="required"/>
+
+									</div>
+
+									<div class="right-t fl"><span>（ 身份证上详细的地址 ）</span></div>
+
+							</div>	
+
+							<!--地址-->
+
+							<!--工作单位-->
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6><i class="hidde">*</i>工作单位：</h6></div>
+
+									<div class="right-ti fl">
+
+										<input type="text" name="eye_work" value="{$data.eye_work}" />
+
+									</div>
+
+									<div class="right-t fl"><span>( 若无可不填写。 )</span></div>
+
+							</div>
+
+							<!--工作单位-->
+
+							<!--提交认证-->
+
+							<div class="lineth">
+
+									<div class="right-tit fl"><h6 class="hidde"><i>*</i>工作单位：</h6></div>
+
+									<div class="right-ti fl">
+
+										<input type="submit" name="" value="提交认证" id="but"/>
+
+									</div>
+
+							</div>
+
+							</form>
+							<!--提交认证-->
+
+						<!--p-log end-->	
+
+						</div>
+
+					</div>
+
+					<!--prove_content_people end-->
+
+				</div>
+
+				<!-- /Page Content Wrap -->
+
+			 <!-- Footer -->
+
+			 
+
+
+
+	</body>
+
+	<include file="Common:footer" /> 
+
+</html>

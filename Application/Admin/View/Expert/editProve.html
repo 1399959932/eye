@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+	<!-- Loading Bootstrap -->
+	<link href="Public/Admin/Flat/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+	<!-- Loading Flat UI -->
+	<link href="Public/Admin/Flat/dist/css/flat-ui.css" rel="stylesheet">
+	<link href="Public/Admin/Flat/docs/assets/css/demo.css" rel="stylesheet">
+	<link rel="shortcut icon" href="Public/Admin/Flat/img/favicon.ico">
+	<script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/ueditor.all.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/ueditor.all.js"></script>
+	<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+	<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+	<script type="text/javascript" charset="utf-8" src="Public/Admin/ccc/Org/Ueditor/lang/zh-cn/zh-cn.js"></script>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+	<script src="dist/js/vendor/html5shiv.js"></script>
+	<script src="dist/js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+	<!--上传插件-->
+	<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery.uploadify.min.js"></script>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+	<div class="alert alert-success">专家认证信息管理</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">编辑姓名</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_name" value="{$data.expert_name}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">编辑手机号</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_tel" value="{$data.expert_tel}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">编辑时间</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_time" value="{$data.expert_time}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">编辑身份证号</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_idcard" value="{$data.expert_idcard}">
+		</div>
+
+		<!-- name没改file的 -->
+		<table class='table table-bordered'>
+			<tr class="info" id="uploadList">
+				<td>修改身份证图片</td>
+				<td>
+					<input type="file" name='picture[]' multiple="true" id='list_pic'/>
+
+				</td>
+				<td id='pic-list'><img src="{$data['expert_picdata']}" alt=""/></td>
+			</tr>
+		</table>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">职业编号</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_ractice" value="{$data.expert_ractice}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">所属医院</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_hospital" value="{$data.expert_hospital}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">职位</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_job" value="{$data.expert_job}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">个人描述</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_content" value="{$data.expert_content}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">服务范围</label>
+			<input id="exampleInputEmail1" class="form-control" type="text" placeholder="" required="" name="expert_service" value="{$data.expert_service}">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">编辑审核状态</label><br />
+
+			<input id="exampleInputEmail1" class="" type="radio" required="" name="expert_check" value="0" <if condition="$data['expert_check'] eq 0">checked="checked"</if><br />不通过<br />
+			<input id="exampleInputEmail1" class="" type="radio" required="" name="expert_check" value="1" <if condition="$data['expert_check'] eq 1">checked="checked"</if><br/>通过审核<br />
+			<input id="exampleInputEmail1" class="" type="radio" required="" name="expert_check" value="2" <if condition="$data['expert_check'] eq 2">checked="checked"</if><br/>审核中
+		</div>
+
+	<div>
+
+	<!--<div>-->
+	<!--<label for="exampleInputEmail1">导读</label>-->
+	<!--<input id="exampleInputEmail1" class="form-control" type="text" placeholder="请输入文章导读" required="" name="daodu">-->
+	<!--</div>-->
+	<!--<input type='file'  name='newsart_pic'>-->
+
+	
+
+	<div lab="uploadFile">
+		<!-- <input id="file" type="file" name="medart_pic"> -->
+
+		<script type="text/javascript">
+			$(function(){
+				// alert()
+				var sid = '{:session_id()}';
+				$('#file').uploadify({
+					'fileTypeDesc' : '上传文件',//上传描述
+					'fileTypeExts' : '*.jpg;*.png',
+					'swf'      : 'Public/Admin/ccc/Org/Uploadify/uploadify.swf',
+					'uploader' : "{:U('News/upload')}",
+					'buttonText':'选择文件',
+					'fileSizeLimit' : '40000KB',
+					'uploadLimit' : 1,//上传文件数
+					'width':65,
+					'height':25,
+					'successTimeout':10,//等待服务器响应时间
+					'removeTimeout' : 0.2,//成功显示时间
+					formData : {'session_id' : sid},
+					'onUploadSuccess' : function(file, data, response) {
+						//转为json
+						data=$.parseJSON(data);
+
+						//获得图片地址
+						// var imageUrl = data.url;
+						data.url = data.savepath+data.savename;
+						var li="<li path='"+data.url+"' url='"+data.url+"'><img src='"+data.url+"'/><input type='hidden' name='medart_pic' value='"+data.url+"'/><span class='x'>X</span></li>";
+						$("#uploadList1 ul").prepend(li);
+						$('.x').click(function(){
+							$(this).parent('li').remove();
+						})
+					}
+				});
+			});
+		</script>
+		<style type="text/css">
+			#uploadList1 ul li img{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+<!-- 		<div id="uploadList1">
+			<ul>
+				<li><img src="{$oldData.medart_pic}" alt=""> <span class="x">X</span> </li>
+			</ul>
+		</div> -->
+	</div>
+	<script type="text/javascript">
+		$('.x').click(function(){
+			$(this).parent('li').remove();
+		})
+	</script>
+
+	<!--<input type="hidden" name="his_time">-->
+	<button class="btn btn-primary btn-block" type="submit"> 确定 </button>
+</form>
+</body>
+</html>
+

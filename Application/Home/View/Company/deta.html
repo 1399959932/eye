@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>医疗企业-企业详情</title>
+		<link rel="icon" href="Public/Home/images/favicon.ico" />
+
+		<script type="text/javascript" src="Public/Home/js/loading.js"></script>
+
+		<link rel="stylesheet" href="Public/Home/css/fontello/css/fontello.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/core.animation.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/shortcodes.min.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/plugin.instagram-widget.min.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/skin.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/responsive.min.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/core.messages.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/js/vendor/magnific/magnific-popup.min.css" type="text/css" media="all" />
+
+	</head>
+
+	<body class=" company_center page body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
+		<a id="toc_home" class="sc_anchor" title="Home" data-description="<i>Return to Home</i> - <br>navigate to home page of the site" data-icon="icon-home" data-url="index.html" data-separator="yes"></a>
+		<a id="toc_top" class="sc_anchor" title="To Top" data-description="<i>Back to top</i> - <br>scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+		<!-- Body wrap -->
+		<div class="body_wrap">
+			<!-- Page wrap -->
+			<div class="page_wrap">
+				<div class="top_panel_fixed_wrap"></div>
+				<!-- Header -->
+				<include file="Common:header" />
+				<!-- /Header Mobile -->
+				<!-- Breadcrumbs -->
+				<div class="top_panel_title top_panel_style_3 title_present breadcrumbs_present scheme_original">
+					<div class="top_panel_title_inner top_panel_inner_style_3 breadcrumbs_block_bg3">
+						<div class="content_wrap">
+							<h1 class="page_title">医疗企业</h1>
+							<div class="breadcrumbs">
+								<a class="breadcrumbs_item home" href="index.html">首页</a>
+								<span class="breadcrumbs_delimiter"></span>
+								<a class="breadcrumbs_item home" href="company.html">医疗企业</a>
+								<span class="breadcrumbs_delimiter"></span>
+								<span class="breadcrumbs_item current">企业详情
+                                </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Breadcrumbs -->
+				<div class="content_wrap">
+					<!-- Content -->
+					<div class="content">
+						<div class="company_center_top">
+							<div class="cy_tr_img fl">
+								<img src="{$Deta.company_pic}" />
+							</div>
+							<div class="cy_tr_tt fl">
+								<div class="cy_tr_title">
+									<span>{$Deta.company_name}</span></div>
+								<div class="cy_tr_time_box">
+									<ul>
+										<li class="fl">
+											{$Deta.company_industry}
+										</li>
+
+										<div class="clear"></div>
+									</ul>
+								</div>
+								<div class="cy_tr_intro">
+									{$Deta.company_desc}
+								</div>
+							</div>
+							<div class="cy_tr_share fl">
+								<div class="praise-step-warp">
+									<label class="fl">
+								                分享到：
+								    </label>
+									<ul>
+										<li class="fl">
+											<a href="javascript:;"><i class="icon icon-three-cy icon-qq"></i></a>
+										</li>
+										<li class="fl">
+											<a href="javascript:;"><i class="icon icon-three-cy icon-tencent-weibo"></i></a>
+										</li>
+										<li class="fl">
+											<a href="javascript:;"><i class="icon icon-three-cy icon-weibo"></i></a>
+										</li>
+										<li class="fl">
+											<a href="javascript:;"><i class="icon icon-three-cy icon-facebook"></i></a>
+										</li>
+										<div class="clear"></div>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="company_center_nav">
+							<div class="cy-cp-nav" style="">
+								<a href="user_company.html" class="btn btn-cy-content js-open-cy sc_button sc_button_style_filled sc_button_color_style_2">申请企业展示</a>
+								<ul>
+									<li data-type="" class="user_navli active">
+										<a href="javascript:" data-href="cy-cp-intro-warp">企业介绍</a>
+									</li>
+									<li data-type="advantage" class="user_navli">
+										<a href="javascript:" data-href="advantage">先进科技</a>
+									</li>
+									<li data-type="results" class="user_navli">
+										<a href="javascript:" data-href="results">产品成绩</a>
+									</li>
+									<li data-type="team" class="user_navli">
+										<a href="javascript:" data-href="team">团队介绍</a>
+									</li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>
+						<div class="company_center_main">
+							<div class="wrap-left pull-left column-6_10">
+								<div class="user_navmain">
+									<span class="span-mark-author active">企业介绍</span>
+									<div class="cy-cp-intro-box">
+										<div class="cy-cp-intro-info">
+											{$Deta.company_intro}</div>
+									</div>
+								</div>
+								<div class="user_navmain">
+									<span class="span-mark-author active" id="advantage" name="advantage">先进科技</span>
+									<div class="cy-cp-intro-box">
+										<div class="cy-cp-advantage">
+											目前面向制造业的专业在线培训很少，要不就是网站上零散的视频教程也没有系统性。很多理论也与实践脱节。 线下的费用又特别贵，导致很多中小企业不可能也不会去请一些专家来上课。一天的费用就是上万，效果还不一定。<br>我们将专注于将精益生产，企业管理等基础知识以动漫视频形式进行系统的展示，极大的降低企业的学习成本。 </div>
+									</div>
+
+								</div>
+								<div class="user_navmain">
+									<span class="span-mark-author active" id="results" name="results">产品成绩</span>
+									<div class="cy-cp-intro-box">
+										<div class="cy-cp-advantage">
+											目前粉丝群有一千五百人。<br>入驻机构5家 </div>
+									</div>
+								</div>
+								<div class="user_navmain">
+									<span class="span-mark-author active" id="team" name="team">团队介绍</span>
+									<ul class="cy-cp-team cy-cp-intro-box">
+										<li>
+											<div class="team-personnel-name column-1_5">
+												{$Deta.company_leader} </div>
+											<div class="team-personnel-position column-1_5">
+												创始人 </div>
+											<div class="team-personnel-intro column-3_5">
+												15年的工作经验，从事过产品研发和设计，精益生产管理，
+												担任过技术工程师，精益工程师，工艺工程师，技术总监，运营总监等职务，服务过大型民企，外企等单位，从事过电机，水泵等行业。对精益生产和企业管理有着深刻的自我理解。
+											</div>
+											<div class="clear"></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="wrap-right pull-right column-3_10">
+								<div class="box-moder cy-box-moder company-info">
+									<h3>公司基本信息</h3>
+									<span class="span-mark"></span>
+									<ul class="">
+										<li>创始人：<span>{$Deta.company_leader} </span></li>
+										<li>网址：<span><a href="http://www.hottui.net" target="_blank">www.xxxx.net</a></span></li>
+										<li>融资：<span>未融资</span></li>
+										<li>地址：<span>{$Deta.company_address} </span></li>
+										<li>员工：<span></span></li>
+									</ul>
+								</div>
+								<div class="box-moder cy-box-moder company-info get-company-box">
+									<h3>公司其他信息</h3>
+									<span class="span-mark"></span>
+									<ul class="">
+										<li><label>公司</label>：<span id="company_name" class="name">{$Deta.company_name}</span></li>
+										<li><label>成立时间：</label><span class="company_time">{$Deta.company_found_time}</span></li>
+										<li><label>法定代表：</label><span class="founder_name">吕x梅</span></li>
+										<li><label>公司类型：</label><span class="type">有限责任公司(自然人独资)</span></li>
+									</ul>
+									<div class="qichacha">
+										<img src="https://img.huxiucdn.com/article/cover/201604/25/100612738450.jpg?|imageMogr2/strip/interlace/1/quality/85/format/jpg">&nbsp;更多信息请访问&nbsp;
+										<a href="http://www.qixin.com/" target="_blank">启信宝提供</a>
+									</div>
+								</div>
+								<div class="box-moder company-info">
+									<div class="cy-section-get-back">
+										<div class="cy-section-prompt">请登录账号进入“企业个人中心”进行项目修改，如有疑问请发信至chuangye@xioatianshi.com</div>
+										<a href="/chuangye/get_back?com_id=60845" target="_blank">认领该项目</a>
+									</div>
+								</div>
+
+							</div>
+							<div class="clear"></div>
+						</div>
+
+					</div>
+					<!-- /Content -->
+				</div>
+				 <!-- Footer -->
+                <include file="Common:footer" />
+	</body>
+
+</html>

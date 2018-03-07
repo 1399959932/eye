@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>专家认证中心</title>
+	<include file="Common:header1" />
+	<include file="Common:header" />
+
+
+</head>
+
+<body class="prove_expert page page-template body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right">
+
+<!-- Breadcrumbs -->
+<div class="top_panel_title top_panel_style_3 title_present breadcrumbs_present scheme_original">
+	<div class="top_panel_title_inner top_panel_inner_style_3 breadcrumbs_block_bg3">
+		<div class="content_wrap">
+			<h1 class="page_title">认证中心</h1>
+			<div class="breadcrumbs">
+				<a class="breadcrumbs_item home" href="index.html">首页</a>
+				<span class="breadcrumbs_delimiter"></span>
+				<span class="breadcrumbs_item current">专家认证中心</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Breadcrumbs -->
+<!-- Page Content Wrap -->
+<div class="content_wrap">
+	<div class="prove_content_expert">
+		<div class="p-log">
+			<!--标题-->
+			<div class="line">
+				<div class="right-title fl">
+					<h4>专家认证中心</h4>
+				</div>
+				<div class="right-title fr">
+					<a href="item_explain.html"><span class="lits">帮助</span></a>
+				</div>
+			</div>
+			<!--标题-->
+			<div class="lineto">
+				<h5>专家基本信息</h5>
+			</div>
+			<!-- 陈2.26专家认证start -->
+			<form action="" method="post" enctype="multipart/from-data">
+				<!--手机号码-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i> 手机号码：</h6></div>
+					<div class="right-tit fl"><h6><input type="text" name="expert_tel" value="{$_SESSION['expert_phone']}"></h6></div>
+				</div>
+				<!--手机号码-->
+				<!--真实姓名-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>真实姓名：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_name" value="" required="required" />
+					</div>
+					<div class="right-t fl"><span>( 请务必填写真实姓名，绑定认证后将无法修改。 )</span></div>
+				</div>
+				<!--真实姓名-->
+				<!--身份证号-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>身份证号：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_idcard" value="" required="required"/>
+					</div>
+					<div class="right-t fl"><span>( 请填写匹配身份证号，绑定认证后将无法修改。 )</span></div>
+				</div>
+				<!--身份证号-->
+				<!--上传照片-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>上传照片：</h6></div>
+					<div class="right-ti fl">
+						<input type="file" name="expert_picdata" value="" multiple="multiple" required="required"/>
+					</div>
+					<div class="right-t fl"><span>( 身份证正反面 )</span></div>
+				</div>
+				<!--上传照片-->
+				<!--执业编号-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>执业编号：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_ractice" value="" required="required"/>
+					</div>
+					<div class="right-t fl"><span>( 真实的执业编号 )</span></div>
+				</div>
+				<!--执业编号-->
+				<div class="lineto">
+					<h5>完善信息</h5>
+				</div>
+				<!--所在医院-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i class="hidde">*</i>所在医院：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_hospital" value="" required="required"/>
+					</div>
+					<div class="right-t fl"><span>（ 工作的医院名称 ）</span></div>
+				</div>
+				<!--所在医院-->
+				<!--所属职位-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i class="hidde">*</i>所属职位：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_job" value="" required="required"/>
+					</div>
+					<div class="right-t fl"><span>( 若无可不填写。 )</span></div>
+				</div>
+				<!--所属职位-->
+				<!--个人描述-->
+				<div class="lineth" id="highly">
+					<div class="right-tit fl"><h6><i class="hidde">*</i>个人描述：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_content" value="" required="required"/>
+					</div>
+					<div class="right-tit fl"><h6 class="hidde"><i>*</i>没有文字：</h6></div>
+					<div class="right-t fl">
+						<span><i class="hidde">是*没有文字：</i>个人描述建议保持在40～120字之间，同时建议前40个字能表达出个人的工作奉献</span>
+					</div>
+				</div>
+				<!--个人描述-->
+				<!--服务范围-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i class="hidde">*</i>服务范围：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" name="expert_service" value="" required="required"/>
+					</div>
+					<div class="right-t fl"><span>( 如：眼科、鼻科、外科等)</span></div>
+				</div>
+				<!--服务范围-->
+				<!--提交认证-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6 class="hidde"><i>*</i>没有文字：</h6></div>
+					<div class="right-ti fl">
+						<input type="submit" value="提交认证" id="but"/>
+					</div>
+				</div>
+				<!--提交认证-->
+			</form>
+			<!-- 陈2.26专家认证结束 -->
+			<!--p-log end-->
+		</div>
+	</div>
+</div>
+<!-- /Page Content Wrap -->
+<!-- Footer -->
+<include file="Common:footer" />
+</body>
+
+</html>

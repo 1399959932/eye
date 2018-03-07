@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>专家个人</title>
+		<link rel="icon" href="Public/Home/images/favicon.ico" />
+
+		<script type="text/javascript" src="Public/Home/js/loading.js"></script>
+
+		<link rel="stylesheet" href="Public/Home/css/fontello/css/fontello.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/js/vendor/revslider/css/settings.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/plugin.revslider.min.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/plugin.instagram-widget.min.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/core.animation.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/shortcodes.min.css" type="text/css" media="all" />
+
+		<link rel='stylesheet' href="Public/Home/js/vendor/swiper/swiper.min.css" type='text/css' media='all' />
+
+		<link rel="stylesheet" href="Public/Home/css/skin.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/css/responsive.css" type="text/css" media="all" />
+
+		<link rel="stylesheet" href="Public/Home/css/core.messages.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="Public/Home/js/vendor/magnific/magnific-popup.min.css" type="text/css" media="all" />
+
+	</head>
+
+	<body class="expert page body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
+		<!-- Header -->
+		<include file="Common:header" />
+                <!-- /Header Mobile -->
+		<!--expert page-->
+
+		<!-- Breadcrumbs -->
+		<div class="top_panel_title top_panel_style_3 title_present breadcrumbs_present scheme_original">
+			<div class="top_panel_title_inner top_panel_inner_style_3 breadcrumbs_block_bg4">
+				<div class="content_wrap">
+					<h1 class="page_title">眼科专家</h1>
+					<div class="breadcrumbs">
+						<a class="breadcrumbs_item home" href="index.html">首页</a>
+						<span class="breadcrumbs_delimiter"></span>
+						<a class="breadcrumbs_item home" href="expert.html">眼科专家</a>
+						<span class="breadcrumbs_delimiter"></span>
+						<span class="breadcrumbs_item current">专家个人</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Breadcrumbs -->
+		<!-- Content -->
+		<div class="content_wrap">
+			<div class="center expert">
+				<div class="expert_top">
+					<div class="expert_top_left fl">
+						<div class="expert_center_tp fl">
+							<span class="doc_zx">在线</span>
+							<img src="{$Deta.expert_pic}" />
+						</div>
+						<div class="expert_center_js fl breadcrumbs">
+							<div class="expert_title">{$Deta.expert_realname}</div>
+							<span>
+							<a href="">{$Deta.expert_hospital}</a>
+						</span>
+							<span class="breadcrumbs_delimiter"></span>
+							<span>{$Deta.expert_job}</span>
+							<div>
+								<span>执业编号：</span>
+								<span>{$Deta.expert_prac}</span>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="expert_top_right fr">
+						<ul>
+							<li class="fl">
+								<span class="bk expert_top_right_number">122</span> 接受咨询
+							</li>
+							<li class="fl">
+								<span class="bk expert_top_right_number">89</span> 点评用户
+							</li>
+							<li class="fl">
+								<span class="bk expert_top_right_number">9.8</span> 综合评分
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="expert_bottom">
+					<div class="expert_bottom_nav user_wrap">
+						<ul style="border-bottom: 1px solid #ccc;">
+							<li class="user_navli active">专家主页</li>
+							<li class="user_navli">用户评论</li>
+							<li class="user_navli">服务咨询</li>
+							<li class="user_navli">专家论文</li>
+							<div class="clear"></div>
+						</ul>
+						<div class="user_navmain bk">
+							<div class="expert_bottom_doc_left fl">
+								<div class="video">
+									<video controls="controls" class="exper_bottom_video">
+										<source src="Public/Home/video/demo.mp4" type="video/mp4">
+									</video>
+								</div>
+								<div class="h_docabout">
+									<div>
+										<strong>医生简介：</strong>
+										<p id="detail_p1"><span>
+										<span>{$Deta.expert_brief}</span>
+											<em title="展开">... 
+												<a>更多↓</a>	
+											</em>
+											</span>
+											<em title="收起">　
+											<a>收起↑</a>
+										</em>
+										</p>
+									</div>
+									<div>
+										<strong>服务范围：</strong>
+										<p id="detail_p2"><span>
+										<span>{$Deta.expert_service}</span>
+											<em title="展开">	</em>
+											</span>
+											<em title="展开"></em>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="expert_bottom_doc_right fl">
+								<div class="exper_doc_serbox clears" style="display: none;">
+									<span class="ti"><b>亲，我能为你提供的服务!</b>平台担保，专家服务不满意请投诉并全额退款于您。</span>
+									<div class="dl">
+										<span class="ico"><i class="i1"></i>指定咨询</span>
+										<div>
+											<p><br>购买后，您可以：<br>随时向我在线咨询1次</p>
+											<span><em>99.00元</em>/次</span>
+											<a href="#">点击查看&gt;</a>
+										</div>
+									</div>
+									<div class="dl">
+										<span class="ico"><i class="i2"></i>健康顾问</span>
+										<div>
+											<p>签约健康顾问后，您可以：<br>1、随时向我咨询，不限次数<br>2、可以向我电话咨询<br>3、获得我的回访</p>
+											<span><em>200.00元</em>/周</span>
+											<a href="#">点击查看&gt;</a>
+										</div>
+									</div>
+								</div>
+								<div class="exper_doc_rbox clears" style="display: none;">
+									<span class="ti"><a href="#">更多购买记录 &gt;&gt;</a>服务购买记录<em>(16)</em></span>
+									<ul class="serlist">
+										<li class="top">
+											<span class="sp1">用户</span>
+											<span class="sp2">地区</span>
+											<span class="sp3">所购服务</span>
+											<span class="sp4">价格</span>
+											<span class="sp5">购买时间</span></li>
+										<li class="li">
+											<span class="sp1">保密 / 女</span>
+											<span class="sp2">浙江省金华市</span>
+											<span class="sp3">指定咨询</span>
+											<span class="sp4">99元/次</span>
+											<span class="sp5">2017-12-19 16:05:04</span>
+										</li>
+										<li class="li">
+											<span class="sp1">ucz*******0000 /  </span>
+											<span class="sp2">广东省广州市</span>
+											<span class="sp3">指定咨询</span>
+											<span class="sp4">99元/次</span>
+											<span class="sp5">2017-12-19 15:39:52</span>
+										</li>
+										<li class="li">
+											<span class="sp1">*密 / 女</span>
+											<span class="sp2">浙江省金华市</span>
+											<span class="sp3">指定咨询</span>
+											<span class="sp4">99元/次</span>
+											<span class="sp5">2017-12-17 21:37:47</span>
+										</li>
+										<li class="li">
+											<span class="sp1">*陈 / 女</span>
+											<span class="sp2">马尔代夫</span>
+											<span class="sp3">指定咨询</span>
+											<span class="sp4">99元/次</span>
+											<span class="sp5">2017-12-16 23:24:14</span>
+										</li>
+										<li class="li">
+											<span class="sp1">手**专卖 / 男</span>
+											<span class="sp2">广东省深圳市</span>
+											<span class="sp3">指定咨询</span>
+											<span class="sp4">99元/次</span>
+											<span class="sp5">2017-12-08 11:37:38</span>
+										</li>
+										<li class="li">
+											<span class="sp1">*密 / 女</span>
+											<span class="sp2">浙江省金华市</span>
+											<span class="sp3">指定咨询</span>
+											<span class="sp4">99元/次</span>
+											<span class="sp5">2017-12-07 14:48:31</span>
+										</li>
+									</ul>
+								</div>
+								<div class="exper_doc_rbox clears" style="margin: 0;">
+									<span class="ti">
+									<a href="#">查看全部点评  &gt;&gt;</a>服务用户点评<em>(11)</em></span>
+									<ul class="commentlist">
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-12-03</em><var></var>　山东省日照市　 </span>
+												<p>大夫给予我很大的关心，支持！！</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-12-02</em><var></var>　浙江省宁波市　 </span>
+												<p>非常感谢医生，很谢谢谢谢谢谢谢谢谢谢谢谢</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-12-01</em><var></var>　河北省石家庄市　 </span>
+												<p>非常感谢，，，，，，</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-11-24</em><var></var>　中国台湾　 </span>
+												<p>很好的医生，对工作很严谨对人很真诚</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-11-24</em><var></var>　浙江省温州市　 </span>
+												<p>相对来说专业很多，看来选择副主任以上的医生果然不一样，回答并不会很轻浮 ，谢谢医生</p>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						<div class="clear"></div>
+						</div>
+						<div class="user_navmain">
+							<div class="expert_bottom_doc_right2 fl">
+								<div>
+									<!-- UY BEGIN -->
+					-->
+									<!-- UY END -->
+								</div>
+								<div class="exper_doc_rbox clears">
+									<span class="ti">
+									<a href="#">查看全部点评  &gt;&gt;</a>服务用户点评<em>(11)</em></span>
+									<ul class="commentlist">
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-12-03</em><var></var>　山东省日照市　 </span>
+												<p>大夫给予我很大的关心，支持！！</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-12-02</em><var></var>　浙江省宁波市　 </span>
+												<p>非常感谢医生，很谢谢谢谢谢谢谢谢谢谢谢谢</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-12-01</em><var></var>　河北省石家庄市　 </span>
+												<p>非常感谢，，，，，，</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-11-24</em><var></var>　中国台湾　 </span>
+												<p>很好的医生，对工作很严谨对人很真诚</p>
+											</div>
+										</li>
+										<li>
+											<div class="grade">
+												5分
+												<p><span></span></p>
+											</div>
+											<div class="cont">
+												<span><em>2017-11-24</em><var></var>　浙江省温州市　 </span>
+												<p>相对来说专业很多，看来选择副主任以上的医生果然不一样，回答并不会很轻浮 ，谢谢医生</p>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="user_navmain">
+							<div>
+								<form action="#" method="post">
+									<div class="wenda">
+										<textarea placeholder="请输入您的病症或疑问应不少于20个字">
+										</textarea>
+									</div>
+									<input type="submit" value="提交" />
+								</form>
+							</div>
+							<img src="Public/Home/images/wenda.png" />
+						</div>
+						<div class="user_navmain">
+							<div class="compre_box clears">
+								<span class="ti">全部文章<em>(0)</em></span>
+								<ul class="art_list">
+									暂无 </ul>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Content -->
+
+		<!--expert page end-->
+		<!-- Footer -->
+		<include file="Common:footer" />
+	</body>
+
+</html>

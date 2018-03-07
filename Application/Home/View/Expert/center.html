@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn" class="scheme_original">
+
+<head>
+
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="format-detection" content="telephone=no">
+
+
+
+	<title>个人中心-专家</title>
+
+	<include file="Common:header1" />
+
+	<include file="Common:header" />
+
+
+
+</head>
+
+
+
+<body class="user_expert page index body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
+
+
+
+<!--user_center page-->
+
+<div class="content_wrap">
+
+	<div class="user_centent" id="user_wrap">
+
+		<div class="user_tx">
+
+			<a href="" title="">
+
+				<img src="images/big.jpg"/>
+
+			</a>
+
+		</div>
+
+		<div class="user_nav">
+
+			<ul class="user_navul">
+
+				<li class="user_navli active">
+
+					个人资料
+
+				</li>
+
+				<li class="user_navli">
+
+					我的捐助
+
+				</li>
+
+				<li class="user_navli">
+
+					我的项目
+
+				</li>
+
+				<li class="user_navli">
+
+					我的文章
+
+				</li>
+
+				<li class="user_navli">
+
+					密码安全
+
+				</li>
+
+				<div class="clear"></div>
+
+			</ul>
+
+		</div>
+
+		<div class="user_navcerter">
+
+			<div class="user_navmain active">
+
+				<ul class="user_navmain_ul">
+
+					<li>用户名：<input class="user_int" type="" value="payne"/></li>
+
+					<li>手机号：<input class="user_int" type=""value="135xxxx8554"/></li>
+
+					<li>邮&nbsp;&nbsp;&nbsp;箱：<input class="user_int" type="" value="1339155668@qq.com"/></li>
+
+					<div class="clear"></div>
+
+				</ul>
+
+				<a class="user_margg" id="user_margg" href="javascript:;">更改信息</a>
+
+			</div>
+
+			<div class="user_navmain">
+
+				<div id="user_jk">
+
+					<ul>
+
+						<li class="column-1_9">序号</li>
+
+						<li class="column-2_9">捐款时间</li>
+
+						<li class="column-1_9">捐款金额</li>
+
+						<li class="column-3_9">项目</li>
+
+						<div class="clear"></div>
+
+					</ul>
+
+					<ul>
+
+						<li class="column-1_9">1</li>
+
+						<li class="column-2_9">2017-12-11</li>
+
+						<li class="column-1_9">99</li>
+
+						<li class="column-3_9">MD关爱项目</li>
+
+						<div class="clear"></div>
+
+					</ul>
+
+				</div>
+
+				<div style="display: none;">
+
+					暂无捐助信息<a href="">前往捐助</a>
+
+				</div>
+
+			</div>
+
+			<div class="user_navmain">
+
+				<a href="javascript:0">发布项目</a>
+
+			</div>
+
+			<div class="user_navmain">
+
+				<!-- //2.26陈判断start -->
+				<?php
+                          if($prove['expert_check'] == '1'){
+                        ?>
+				<a href="{:U('Expert/publishA')}">发布文章</a>
+				<?php }elseif($prove['expert_check'] == '0') { ?>
+				<a href="{:U('Expert/proveA')}">通过认证后即可发布文章</a>
+
+				<?php }elseif($prove['expert_check'] == '2'){ ?>
+				<a href="{:U('Expert/proveEdit')}">您已提交认证认证信息,工作人员审核中是否修改</a>
+				<?php }else{ ?>
+				<span>您未发布文章,</span><a href="{:U('Expert/proveA')}">发布文章</a>
+				<?php } ?>
+
+				<!-- //2.26陈判断end -->
+			</div>
+
+			<div class="user_navmain">
+
+				<ul>
+
+					<li>旧&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码：&nbsp;<input type="text" placeholder="原始密码"/></li>
+
+					<li>新&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码：&nbsp;<input type="text" placeholder="新密码"/></li>
+
+					<li>请再次输入：<input type="text" placeholder="请再次输入"/></li>
+
+					<a href="JavaScript:;">更改密码</a>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<include file="Common:footer" />
+
+</body>
+
+
+
+</html>

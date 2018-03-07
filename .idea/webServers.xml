@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="21ef444e-9acf-4860-878d-8660805210e7" name="eye" url="http://192.168.4.32">
+        <fileTransfer host="192.168.4.32" port="22" accessType="SFTP" password="dfcedfcbdfc9dfc2dfdfdfcbdfc4" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

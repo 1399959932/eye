@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+
+        <title>眼科医学</title>
+        <link rel="icon" href="favicon.ico" />
+
+		<script type="text/javascript" src="Public/Home/js/loading.js" ></script>
+
+        <link rel="stylesheet" href="Public/Home/css/fontello/css/fontello.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" href="Public/Home/js/vendor/woocommerce/css/woocommerce-layout.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/js/vendor/woocommerce/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+        <link rel="stylesheet" href="Public/Home/js/vendor/woocommerce/css/woocommerce.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" href="Public/Home/css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/css/core.animation.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/css/shortcodes.min.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" href="Public/Home/css/plugin.instagram-widget.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/css/plugin.woocommerce.min.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" href="Public/Home/css/skin.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/css/responsive.min.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" href="Public/Home/css/core.messages.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/js/vendor/magnific/magnific-popup.min.css" type="text/css" media="all" />
+
+          <link rel="stylesheet" href="Public/Home/js/vendor/essential-grid/css/settings.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/js/vendor/essential-grid/css/lightbox.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Public/Home/css/tpl-essential-grids.min.css" type="text/css" media="all" />
+    </head>
+
+    <body class="archive body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right woocommerce woocommerce-page">
+        <a id="toc_home" class="sc_anchor" title="Home" data-description="<i>Return to Home</i> - <br>navigate to home page of the site" data-icon="icon-home" data-url="index.html" data-separator="yes"></a>
+        <a id="toc_top" class="sc_anchor" title="To Top" data-description="<i>Back to top</i> - <br>scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+        <!-- Body wrap -->
+        <div class="body_wrap">
+            <!-- Page wrap -->
+            <div class="page_wrap">
+                <div class="top_panel_fixed_wrap"></div>
+                  <!-- Header -->
+                <include file="Common:header" />
+                <!-- /Header Mobile -->
+                <!-- Breadcrumbs -->
+                <div class="top_panel_title top_panel_style_3 title_present breadcrumbs_present scheme_original">
+                    <div class="top_panel_title_inner top_panel_inner_style_3 breadcrumbs_block_bg1">
+                        <div class="content_wrap">
+                            <h1 class="page_title">眼科医学</h1>
+                            <div class="breadcrumbs">
+                                <a class="breadcrumbs_item home" href="index.html">首页</a>
+                                <span class="breadcrumbs_delimiter"></span>
+                                <span class="breadcrumbs_item current">眼科医学</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Breadcrumbs -->
+                <!-- Page Content Wrap -->
+                <div class="page_content_wrap page_paddings_no">
+                    <div class="content_wrap">
+                        <!-- Content -->
+                        <div class="content">
+                            <div class="list_products shop_mode_thumbs">
+                                <p class="woocommerce-result-count">
+                                  		 眼科医学
+                                </p>
+                                <form class="woocommerce-ordering" method="get">
+                                    <select name="orderby" class="orderby">
+                                        <option value="menu_order" selected='selected'>眼科小知识</option>
+                                        <option value="popularity">眼科专家讲座</option>
+                                        <option value="rating">眼科日常保健</option>
+                                        <option value="date">眼科对症下药</option>
+                                        <option value="price">眼科最新技术</option>
+                                    </select>
+                                </form>
+                                <!-- Products list -->
+                                <ul class="products">
+                                    <!-- Product item -->
+                                    <foreach name="Data" item="vo">
+                                    <li class="product column-1_3 first">
+                                        <div class="post_item_wrap">
+                                            <div class="post_featured">
+                                                <div class="post_thumb hover_icon">
+                                                    <img src="{$vo.medart_pic}" alt="" title="god-is-love-tshirt" />
+                                                    <a href="{:U('Ophtha/center',array('medart_id' => $vo['medart_id']))}" class="button add_to_cart_button">查看详情</a>
+                                                </div>
+                                            </div>
+                                            <h3>
+                                                <a href="{:U('Ophtha/center',array('medart_id' => $vo['medart_id']))}">{$vo.medart_title}</a>
+                                            </h3>
+                                            <div class="op_sj">
+                                            	<span class="post_info_item post_info_counters">{$vo.medart_time}</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </foreach>
+                                    <!-- /Product item -->
+                                </ul>
+                                <!-- /Products list -->
+
+                                <nav id="pagination" class="pagination_wrap pagination_pages">
+                                    <div>{$page}</div>
+                                </nav>
+                            </div> 
+                        </div>
+                        <!-- /Content -->
+                        
+                        <!-- Sidebar -->
+                        <div class="sidebar widget_area scheme_original">
+                            <div class="sidebar_inner widget_area_inner">
+
+                                <!-- Widget: Recent Posts -->
+								<aside class="widget widget_recent_posts">
+									<h5 class="widget_title">推荐文章</h5>
+                                    <!-- 陈1.21 开始 -->
+
+                                    <foreach name="art" item="vo">
+
+                                        <article class="post_item with_thumb first">
+
+
+
+                                            <div class="post_thumb">
+
+                                                <img alt="" src="{$vo.medart_pic}">
+
+                                            </div>
+
+                                            <div class="post_content">
+
+                                                <h6 class="post_title">
+
+
+                                                    <a href="{:U('Ophtha/center',array('medart_id' => $vo['medart_id']))}">{$vo.medart_title}</a>
+
+
+
+
+
+                                                </h6>
+
+                                                <div class="post_info">
+
+                                                <span class="post_info_item">
+
+                                                    <a href="javascript:;" class="post_info_date">{$vo.medart_time} </a>
+
+                                                </span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </article>
+
+                                    </foreach>
+
+                                    <!-- 陈1.21 end -->
+								</aside>
+								<!-- /Widget: Recent Posts -->
+                                <!-- Widget: Product Categories -->
+                                <aside class="widget woocommerce widget_product_categories">
+                                    <h5 class="widget_title">文章排行</h5>
+                                    <ul class="product-categories">
+                                        <foreach name="cateData" item="vo">
+                                        <li>
+                                            <a href="{:U('Ophtha/index', array('category_id' => $vo['category_id']))}">{$vo.category_name}</a>
+                                            <span class="count">(6)</span>
+                                        </li>
+                                        </foreach>
+                                    </ul>
+                                </aside>
+                                <!-- /Widget: Product Categories -->
+                                <!-- Widget: Product Tag Cloud -->
+                                <aside class="widget woocommerce widget_product_tag_cloud">
+                                    <h5 class="widget_title">分类标签</h5>
+                                    <div class="tagcloud">
+                                        <foreach name="tagData" item="vo">
+                                        <a href="{:U('Ophtha/index', array('tag_id' => $vo['tag_id']))}" title="3 products">{$vo.tag_name}</a>
+                                        </foreach>
+                                    </div>
+                                </aside>
+                                <!-- /Widget: Product Tag Cloud -->
+                                <!-- Widget: Product Search -->
+                                <aside class="woocommerce widget_product_search">
+                                    <form role="search" method="get" class="search_form" action="#">
+                                        <input type="text" class="search_field" placeholder="搜索" value="" name="s" title="Search for products:" />
+                                        <button class="search_button icon-search" type="submit"></button>
+                                    </form>
+                                </aside>
+                            </div>
+                        </div>
+                        <!-- /Sidebar -->
+                   </div>
+                </div>
+                <!-- /Page Content Wrap -->
+               <!-- Footer -->
+                <include file="Common:footer" />
+    </body>
+
+</html>

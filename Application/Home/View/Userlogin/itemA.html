@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="scheme_original">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>发布最新项目</title>
+	<include file="Common:header1" />
+	<include file="Common:header" />
+
+	<!--上传插件-->
+	<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery.uploadify.min.js"></script>
+</head>
+
+<body class="page page-template body_style_wide body_filled article_style_stretch scheme_original top_panel_show top_panel_above sidebar_show sidebar_right item_up">
+<a id="toc_home" class="sc_anchor" title="Home" data-description="<i>Return to Home</i> - <br>navigate to home page of the site" data-icon="icon-home" data-url="index.html" data-separator="yes"></a>
+<a id="toc_top" class="sc_anchor" title="To Top" data-description="<i>Back to top</i> - <br>scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+<!-- Body wrap -->
+<!-- Page Content Wrap -->
+<div class="content_wrap item_up">
+	<div class="item_upmain" id="upmain">
+		<!--left-menu start-->
+		<div class="left-menu fl">
+			<!--项目管理 start-->
+			<div class="">
+				<h4>项目管理</h4>
+				<ul class="bj">
+					<li>我的项目</li>
+					<li class="launch">发起项目</li>
+					<li>项目进展</li>
+				</ul>
+			</div>
+			<!--平台服务 start-->
+			<div class="">
+				<h4>平台服务</h4>
+				<ul class="bj">
+					<li>平台公告</li>
+					<li>系统通知</li>
+				</ul>
+			</div>
+			<!--设置 start-->
+			<div class="">
+				<h4>设置</h4>
+				<ul class="bj">
+					<li>基本信息</li>
+					<li>绑定微信</li>
+				</ul>
+			</div>
+		</div>
+		<!--left-menu end-->
+		<div class="right-menu fr">
+			<div class="line">
+				<div class="right-title fl">
+					<h4>公益项目申请<span class="lits"> 项目详情模块填写指引戳这里>></span></h4>
+				</div>
+				<div class="right-title fr lits">
+					<span class="lits">项目发起说明</span>
+					<span class="lits">帮助</span>
+				</div>
+			</div>
+			<!--line end-->
+			<!--填写信息 start-->
+			<!--筹款目标-->
+			<!-- 陈1.30发起项目功能start -->
+			<form action="" method="post" autocomplete="on">
+				<!--患者姓名-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>患者姓名：</h6></div>
+					<div class="right-ti fl">
+						<input id="length" type="text" name="rescue_name" value="" autofocus />
+					</div>
+					<div class="right-t fl"><span>( 受助者的真实姓名 )</span></div>
+				</div>
+				<!--患者姓名-->
+				<!--患者性别-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>患者性别：</h6></div>
+					<div class="right-ti fl">
+						<!--<form ><input id="length" type="text" value=""/></form>-->
+
+						<input id="rescue_sex" type="radio" name="rescue_sex" value="0" />男<input id="rescue_sex" type="radio"  name="rescue_sex" value="1" />女
+
+					</div>
+				</div>
+				<!--患者性别-->
+				<!--所在地址-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>所在地址：</h6></div>
+					<div class="right-ti fl">
+						<input id="length" type="text" name="rescue_address" value="" placeholder="如：xx市xx省xx详细地址"  />
+					</div>
+				</div>
+				<!--所在地址-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>筹款金额：</h6></div>
+					<div class="right-ti fl">
+						<input id="length" type="text" name="rescue_appeal" value="" />
+						<b>元</b>
+					</div>
+					<div class="right-t fl"><span>( 请输入整数金额，例如：5000 )</span></div>
+				</div>
+				<!--筹款目标-->
+				<!--筹款名称-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>筹款名称：</h6></div>
+					<div class="right-ti fl">
+						<input id="length" type="text" name="rescue_title" value=""  />
+					</div>
+					<div class="right-t fl"><span>( 不超过15个字，例如“为植物人撑起希望” )</span></div>
+				</div>
+				<!--筹款名称-->
+				<!--求助说明-->
+				<div class="lineth" id="highly">
+					<div class="right-tit fl"><h6><i>*</i>求助说明：</h6></div>
+					<div class="right-ti fl">
+						<textarea cols="20" row="14"  name="rescue_intro"> </textarea>
+					</div>
+					<div class="right-tit fl"><h6 class="hidde"><i>*</i>没有文字：</h6></div>
+					<div class="right-t fl">
+						<span>（请填写您真实的身份，与受助对象的关系，以及筹款原因、目的、身体状况和善款用途等信息，54字以内。）</span>
+					</div>
+				</div>
+				<!--求助说明-->
+				<!--添加图片-->
+				<div class="lineth" style="height:auto">
+					<div class="lineth" >
+						<div class="right-tit fl"><h6><i>*</i>添加图片：</h6></div>
+						<div class="right-ti fl">
+							<input id="file" type="file" name="rescue_pic" multiple="multiple"  required="required"/>
+						</div>
+						<div class="right-t fl"><span>(添加真实感人的照片，支持jpg,gif,png格式，不超过10MB )</span></div>
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							// alert()
+							var sid = '{:session_id()}';
+							$('#file').uploadify({
+								'fileTypeDesc' : '上传文件',//上传描述
+								'fileTypeExts' : '*.jpg;*.png',
+								'swf'      : '/Public/Admin/ccc/Org/Uploadify/uploadify.swf',
+								'uploader' : "{:U('Userlogin/upload')}",
+								'buttonText':'选择文件',
+								'fileSizeLimit' : '80000KB',
+								'uploadLimit' : 3,//上传文件数
+								'width':85,
+								'height':25,
+								'successTimeout':10,//等待服务器响应时间
+								'removeTimeout' : 0.2,//成功显示时间
+								formData : {'session_id' : sid},
+								'onUploadSuccess' : function(file, data, response) {
+									//转为json
+									console.log(data);
+									data=$.parseJSON(data);
+
+									//获得图片地址
+									// var imageUrl = data.url;
+									data.url = data.savepath + data.savename;
+									console.log(data.url);
+									var li="<li path='"+data.url+"' url='"+data.url+"'><img src='"+data.url+"'/><input type='hidden' name='rescue_pic' value='"+data.url+"'/><span class='x'>X</span></li>";
+									$("#uploadList1 ul").prepend(li);
+									$('.x').click(function(){
+										$(this).parent('li').remove();
+									})
+								}
+							});
+						});
+					</script>
+					<style type="text/css">
+						#uploadList1 ul li img{
+							width: 100px;
+							height: 100px;
+						}
+					</style>
+					<div id="uploadList1">
+						<ul>
+
+						</ul>
+					</div>
+
+				</div>
+				<!--添加图片-->
+				<!--银行账号-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>银行账号：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" value="" name="rescue_blankcard" required="required"/>
+					</div>
+				</div>
+				<!--银行账号-->
+				<!--开户银行支行-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6><i>*</i>开户银行：</h6></div>
+					<div class="right-ti fl">
+						<input type="text" value="" placeholder="请填写具体的开户银行和支行信息" name="rescue_blankhome" required="required"/>
+					</div>
+					<div class="right-t fl"><span>( 该银行卡不直接接收善款，仅用于审核，限储蓄卡 )</span></div>
+				</div>
+				<!--开户银行支行-->
+				<!--同意-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6 class="hidde"><i>*</i>没有文字：</h6></div>
+					<div class="right-ti fl">
+
+						<input type="checkbox" name="" value="" class="radio" required="required"/>
+					</div>
+					<div class="right-t fl"><span>同意并接受<b>《小天使公益用户协议》</b></span></div>
+				</div>
+				<!--同意-->
+				<!--保存按钮-->
+				<div class="lineth">
+					<div class="right-tit fl"><h6 class="hidde"><i>*</i>没有文字：</h6></div>
+					<div class="right-ti fl">
+						<!-- <a href="{:U('Userlogin/itemB')}"></a> -->
+						<a href="{:U('Userlogin/itemB')}"><input type="submit" name="" value="提交" id="but"/></a>
+					</div>
+				</div>
+				<!--保存按钮-->
+				<!--填写信息 end-->
+			</form>
+			<!-- 1.30陈结束	 -->
+		</div>
+	</div>
+</div>
+<!-- /Page Content Wrap -->
+<!-- Footer -->
+
+<include file="Common:footer" />
+</body>
+
+</html>
