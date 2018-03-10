@@ -13,7 +13,7 @@ class CompanyController extends CommonController {
         if(IS_POST){
             $post =I('post.');
 //            dump($post);exit;
-            $post['company_password']=md5($post['company_password']);
+            // $post['company_password']=md5($post['company_password']);
             //实例化模型
             $model =M('eye_company');
             //查询，根据用户名密码进行查询

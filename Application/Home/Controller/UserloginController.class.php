@@ -18,7 +18,7 @@ class UserloginController extends Controller {
         if(IS_POST){
             $post =I('post.');
 //1.29陈注释了一行代码
-            $post['eye_password']=md5($post['eye_password']);
+            // $post['eye_password']=md5($post['eye_password']);
 //1.29陈注释了一行代码
             //实例化模型
             $model =D('eye_user');

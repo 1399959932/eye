@@ -14,7 +14,7 @@ class ExpertController extends CommonController {
             $post =I('post.');
 //            dump($post);exit;
 //1.29陈注释了一行代码
-            $post['expert_password']=md5($post['expert_password']);
+            // $post['expert_password']=md5($post['expert_password']);
 //1.29陈注释了一行代码
             //实例化模型
             $model =M('eye_expert_user');

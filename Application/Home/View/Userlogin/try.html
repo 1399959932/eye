@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>xx</title>
+		<script type="text/javascript" src="Public/Home/js/jquery/jquery.js"></script>`
+	
+		<!--上传插件-->
+		<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="Public/Admin/ccc/Org/Uploadify/jquery.uploadify.min.js"></script>
+	</head>
+</head>
+
+<body>
+	<form action="" method="post" enctype="multipart/form-data">
+		<input type="file" value="上传文件" name="rescue_pic" id="file">
+		<input type="submit" value="ok">
+
+	<script type="text/javascript">
+					$(function(){
+						// alert()
+						var sid = '{:session_id()}';
+						$('#file').uploadify({
+							'fileTypeDesc' : '上传文件',//上传描述
+							'fileTypeExts' : '*.jpg;*.png',
+							'swf'      : '/Public/Admin/ccc/Org/Uploadify/uploadify.swf',
+							'uploader' : "{:U('Userlogin/upload')}",
+							'buttonText':'选择文件',
+							'fileSizeLimit' : '80000KB',
+							'uploadLimit' : 3,//上传文件数
+							'width':85,
+							'height':25,
+							'successTimeout':10,//等待服务器响应时间
+							'removeTimeout' : 0.2,//成功显示时间
+							formData : {'session_id' : sid},
+							'onUploadSuccess' : function(file, data, response) {
+								//转为json
+								console.log(data);
+								data=$.parseJSON(data);
+
+								//获得图片地址
+								// var imageUrl = data.url;
+								data.url = data.savepath + data.savename;
+								console.log(data.url);
+								var li="<li path='"+data.url+"' url='"+data.url+"'><img src='"+data.url+"'/><input type='hidden' name='newsart_pic' value='"+data.url+"'/><span class='x'>X</span></li>";
+								$("#uploadList1 ul").prepend(li);
+								$('.x').click(function(){
+									$(this).parent('li').remove();
+								})
+							}
+						});
+					});
+				</script>
+				<style type="text/css">
+					#uploadList1 ul li img{
+						width: 100px;
+						height: 100px;
+					}
+				</style>
+				<div id="uploadList1">
+					<ul>
+
+					</ul>
+				</div></form>
+
+</body>
+</html>
+
